@@ -1,4 +1,3 @@
-![get](https://github.com/user-attachments/assets/a9762d64-4fd4-4c34-8647-87ebea51693d)
 # Weekly Schedule API
 
 This is a simple Django application that implements a CRUD API (Create, Read, Update, Delete) for managing a weekly schedule with IDs associated with time slots for each day of the week. The application includes Swagger documentation and uses JWT (JSON Web Token) for authentication.
@@ -89,11 +88,13 @@ The response will include an `access` token that you can use to authenticate req
   - **Request Body**:
     ```json
     {
-        "day_of_week": "Monday",
-        "start_time": "09:00:00",
-        "end_time": "17:00:00"
+        "day_of_week": "3",
+        "start_time": "02:00:00",
+        "end_time": "03:00:00"
     }
     ```
+    ![post](https://github.com/user-attachments/assets/76985e71-e1f4-49cb-b163-19eb88686ccd)
+
 
 - **Read Time Slots**:
   - **Endpoint**: `GET /api/timeslots/`
@@ -113,9 +114,9 @@ The response will include an `access` token that you can use to authenticate req
   - **Request Body**:
     ```json
     {
-        "day_of_week": "Monday",
-        "start_time": "10:00:00",
-        "end_time": "18:00:00"
+        "day_of_week": "4",
+        "start_time": "04:00:00",
+        "end_time": "05:00:00"
     }
     ```
     
