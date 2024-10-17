@@ -19,10 +19,11 @@ This is a simple Django application that implements a CRUD API (Create, Read, Up
 
 ### Prerequisites
 
-- Python 3.6 or higher
-- Django 3.2 or higher
+- Python 3.10 or higher
+- Django 5.1.2 or higher
 - Pip
 
+* If on mac, you can either install Python via Python official website, https://www.python.org/downloads/release/python-3130/, or homebrew
 ### Installation
 
 1. **Clone the repository**:
@@ -65,10 +66,18 @@ The API is documented using Swagger UI. To access the documentation, navigate to
 http://127.0.0.1:8000/swagger/
 ```
 
+
+## POSTMAN
+You can download POSTMAN and use the collections and environment in the `postman` directory to make these calls.
+To download POSTMAN: https://www.postman.com/downloads/
+
+- Import the collection and environment
+- Make sure to select the environment called `Upwork Test` to have the right `bearer_token` variables.
+
 ### Authentication
 ![auth](https://github.com/user-attachments/assets/0dcc78c6-0998-4a25-91cf-6d0f2cebf474)
 
-The API uses JWT for authentication. To obtain a JWT token, send a POST request to the `/api/token/` endpoint with your username and password:
+The API uses JWT for authentication. To obtain a JWT token, send a POST request to the `/api/token/` endpoint with your username and password that you created from the `createsuperuser` command above:
 ```json
 {
     "username": "your_username",
@@ -90,7 +99,10 @@ The response will include an `access` token that you can use to authenticate req
     {
         "day_of_week": "3",
         "start_time": "02:00:00",
-        "end_time": "03:00:00"
+        "end_time": "03:00:00",
+        "stop_time":"",
+        "ids":[],
+        "camera_ids": []
     }
     ```
     ![post](https://github.com/user-attachments/assets/76985e71-e1f4-49cb-b163-19eb88686ccd)
@@ -116,7 +128,10 @@ The response will include an `access` token that you can use to authenticate req
     {
         "day_of_week": "4",
         "start_time": "04:00:00",
-        "end_time": "05:00:00"
+        "end_time": "05:00:00",
+        "stop_time": "",
+        "ids": [],
+        "camera_ids":[]
     }
     ```
     
@@ -142,3 +157,5 @@ For further questions , please refer to the project's GitHub repository.
 - **Django REST Framework Documentation**: [DRF Docs](https://www.django-rest-framework.org/)
 - **djangorestframework-simplejwt Documentation**: [SimpleJWT Docs](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/)
 - **drf-spectacular Documentation**: [Spectacular Docs](https://drf-spectacular.readthedocs.io/en/latest/)
+
+
