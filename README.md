@@ -73,6 +73,7 @@ To download POSTMAN: https://www.postman.com/downloads/
 
 - Import the collection and environment
 - Make sure to select the environment called `Upwork Test` to have the right `bearer_token` variables.
+- You will need to first hit the `/api/token` endpoint and then copy the `access_token` value and put it as the current value in the environment variable for `bearer_token`
 
 ### Authentication
 ![auth](https://github.com/user-attachments/assets/0dcc78c6-0998-4a25-91cf-6d0f2cebf474)
@@ -145,6 +146,14 @@ The response will include an `access` token that you can use to authenticate req
 
 ![delete](https://github.com/user-attachments/assets/ceda41f9-543b-4c41-b7dc-275f85b6e4d8)
 
+## Admin
+
+To go to the admin when the local server is running, go to:
+
+http://127.0.0.1:8000/admin/
+
+- signing with the createsuper user account that you made above.
+
 ## Conclusion
 
 This is a fully functional API for managing a weekly schedule, complete with JWT authentication and Swagger UI documentation. Feel free to extend the application and customize it to meet your requirements.
@@ -157,5 +166,3 @@ For further questions , please refer to the project's GitHub repository.
 - **Django REST Framework Documentation**: [DRF Docs](https://www.django-rest-framework.org/)
 - **djangorestframework-simplejwt Documentation**: [SimpleJWT Docs](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/)
 - **drf-spectacular Documentation**: [Spectacular Docs](https://drf-spectacular.readthedocs.io/en/latest/)
-
-
